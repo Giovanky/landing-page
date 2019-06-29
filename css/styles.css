@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+nav {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.icon {
+    display: block;
+    animation: moveLeft 1s ease-in;
+    z-index: 10000;
+}
+
+header {
+    background: #C04848;
+    background: -webkit-linear-gradient(to right, #480048, #C04848);
+    background: linear-gradient(to right, #480048, #C04848);
+    height: auto;
+    padding: 48px;
+    width: 100%;
+}
+
+.container {
+    width: 95%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    justify-content: space-around;
+}
+
+img {
+    display: block;
+    height: 450px;
+    object-fit: cover;
+    width: auto;
+    animation: moveUp 1s ease-in;
+}
+
+.texts {
+    width: 50%;
+    color: #fff;
+}
+
+.texts h1 {
+    font-size: 80px;
+    animation: moveRight 1s ease-in;
+}
+
+.texts h2 {
+    font-size: 30px;
+    animation: moveLeft 1s ease-in;
+}
+
+.texts a {
+    display: inline-block;
+    color: #fff;
+    font-weight: 300;
+    text-decoration: none;
+    margin-top: 30px;
+    border: 1px solid #fff;
+    width: 150px;
+    border-radius: 3px;
+    text-align: center;
+    padding: 10px 0;
+    animation: moveUp 1s ease-in;
+}
+
+.wave {
+    height: 100px;
+    width: 100%;
+    background: #C04848;
+    background: -webkit-linear-gradient(to right, #480048, #C04848);
+    background: linear-gradient(to right, #480048, #C04848);
+}
+
+.links {
+    position: fixed;
+    display: flex;
+    top: 0;
+    background: #000;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    right: 0;
+    flex-direction: column;
+    width: 100%;
+    transition: all 1s ease;
+    background: #2b5876;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #4e4376, #2b5876);
+    background: linear-gradient(to right, #4e4376, #2b5876);
+}
+
+.one {
+    -webkit-clip-path: circle(0% at 0 0);
+    clip-path: circle(0% at 0 0);
+}
+
+.two {
+    -webkit-clip-path: circle(150% at 0 0);
+    clip-path: circle(150% at 0 0);
+}
+
+/* Animations*/
+
+@keyframes moveLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveUp {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+/* Responsive*/
+
+@media screen and (max-width: 1000px) {
+    img {
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    img {
+        height: 370px;
+    }
+    .texts h1 {
+        font-size: 70px;
+    }
+    .texts h2 {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    img {
+        height: 250px;
+    }
+    .texts h1 {
+        font-size: 40px;
+    }
+    .texts h2 {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .container{
+        width: 100px;
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+    }
+    .texts{
+        width: 100%;
+        text-align: center;
+    }
+    .texts h1 {
+        font-size: 60px;
+    }
+    .texts h2 {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    img{
+        height: 160px;
+    }
+    .texts h1 {
+        font-size: 60px;
+    }
+    .texts h2 {
+        font-size: 25px;
+    }
+    .texts a{
+        font-size: 15px;
+    }
+}
